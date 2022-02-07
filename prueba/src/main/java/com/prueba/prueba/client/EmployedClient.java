@@ -1,13 +1,12 @@
 package com.prueba.prueba.client;
 
-import com.prueba.prueba.model.EmployedModel;
-import com.prueba.prueba.http.EmployedRequest;
-import com.prueba.prueba.http.EmployedResponse;
+import com.prueba.prueba.domain.EmployedDomain;
+import com.prueba.prueba.ws.EmployedRequest;
+import com.prueba.prueba.ws.EmployedResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
-import org.springframework.ws.soap.client.core.SoapActionCallback;
 
 /**
  * Created by michael.garcia on 6/02/2022
@@ -18,7 +17,7 @@ public class EmployedClient extends WebServiceGatewaySupport {
 
     private static final Logger log = LoggerFactory.getLogger(EmployedClient.class);
 
-    public EmployedResponse sendToWsAndSave(EmployedModel employedModel) {
+    public EmployedResponse sendToWsAndSave(EmployedDomain employedModel) {
         EmployedRequest request = new EmployedRequest();
         request.setNames(employedModel.getNames());
         request.setLastNames(employedModel.getLastNames());

@@ -1,25 +1,43 @@
 package com.prueba.prueba.http;
 
-import javax.xml.bind.annotation.*;
+import java.time.LocalDate;
 
 /**
  * Created by michael.garcia on 6/02/2022
  */
-@XmlRootElement(name = "employedResponse")
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-        "names",
-})
 public class EmployedResponse {
-    @XmlElement(required = true)
-    protected String names;
+    private LocalDate timeWithinCompany;
+    private LocalDate age;
 
-    public String getNames() {
-        return names;
+    public EmployedResponse() {
     }
 
-    public void setNames(String names) {
-        this.names = names;
+    public EmployedResponse(LocalDate timeWithinCompany, LocalDate age) {
+        this.timeWithinCompany = timeWithinCompany;
+        this.age = age;
     }
 
+    public LocalDate getTimeWithinCompany() {
+        return timeWithinCompany;
+    }
+
+    public void setTimeWithinCompany(LocalDate timeWithinCompany) {
+        this.timeWithinCompany = timeWithinCompany;
+    }
+
+    public LocalDate getAge() {
+        return age;
+    }
+
+    public void setAge(LocalDate age) {
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "EmployedResponse{" +
+                "timeWithinCompany=" + timeWithinCompany +
+                ", age=" + age +
+                '}';
+    }
 }

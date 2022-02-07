@@ -1,4 +1,4 @@
-package com.prueba.prueba.http;
+package com.prueba.prueba.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

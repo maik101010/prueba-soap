@@ -1,4 +1,4 @@
-package com.prueba.prueba.model;
+package com.prueba.prueba.http;
 
 /**
  * Created by michael.garcia on 6/02/2022

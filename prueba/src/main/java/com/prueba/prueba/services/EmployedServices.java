@@ -1,8 +1,8 @@
 package com.prueba.prueba.services;
 
 import com.prueba.prueba.client.EmployedClient;
-import com.prueba.prueba.model.EmployedModel;
-import com.prueba.prueba.model.EmployedResponse;
+import com.prueba.prueba.domain.EmployedDomain;
+import com.prueba.prueba.http.EmployedResponse;
 import com.prueba.prueba.repository.EmployedRepository;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +21,7 @@ public class EmployedServices {
         this.employedClient = employedClient;
     }
 
-    public EmployedResponse save(EmployedModel employed) {
+    public EmployedResponse save(EmployedDomain employed) {
         //call to another services
         employedClient.sendToWsAndSave(employed);
         EmployedResponse employedResponse = new EmployedResponse();

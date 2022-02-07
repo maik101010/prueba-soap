@@ -1,4 +1,4 @@
-package com.prueba.prueba.model;
+package com.prueba.prueba.domain;
 
 import com.prueba.prueba.constanst.Formatter;
 
@@ -10,7 +10,7 @@ import java.util.Objects;
 /**
  * Created by michael.garcia on 6/02/2022
  */
-public class EmployedModel {
+public class EmployedDomain {
     private String names;
     private String lastNames;
     private String typeDocument;
@@ -20,7 +20,7 @@ public class EmployedModel {
     private String charge;
     private Double salary;
 
-    public EmployedModel(String names, String lastNames, String typeDocument, String document, String birthDate, String dateGetCompany, String charge, Double salary) {
+    public EmployedDomain(String names, String lastNames, String typeDocument, String document, String birthDate, String dateGetCompany, String charge, Double salary) {
         this.names = names;
         this.lastNames = lastNames;
         this.typeDocument = typeDocument;

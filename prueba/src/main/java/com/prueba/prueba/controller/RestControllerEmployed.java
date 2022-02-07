@@ -1,7 +1,7 @@
 package com.prueba.prueba.controller;
 
-import com.prueba.prueba.model.EmployedModel;
-import com.prueba.prueba.model.ErrorResponse;
+import com.prueba.prueba.domain.EmployedDomain;
+import com.prueba.prueba.http.ErrorResponse;
 import com.prueba.prueba.services.EmployedServices;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +23,7 @@ public class RestControllerEmployed {
     }
 
     @GetMapping("/")
-    public ResponseEntity<String> save(@RequestBody EmployedModel employed) {
+    public ResponseEntity<String> save(@RequestBody EmployedDomain employed) {
         if (!employed.validateData()) {
             return ResponseEntity.badRequest().body(new ErrorResponse().toString());
         }
