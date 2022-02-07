@@ -1,0 +1,40 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">
+
+    <xs:element name="employedRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <!--                <xs:element name="country" type="tns:employed"/>-->
+                <xs:element name="names" type="xs:string"/>
+                <xs:element name="lastNames" type="xs:string"/>
+                <xs:element name="typeDocument" type="xs:string"/>
+                <xs:element name="document" type="xs:string"/>
+                <xs:element name="birthDate" type="xs:string"/>
+                <xs:element name="dateGetCompany" type="xs:string"/>
+                <xs:element name="charge" type="xs:string"/>
+                <xs:element name="salary" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="employedResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="names" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--    <xs:complexType name="employed">-->
+    <!--        <xs:sequence>-->
+    <!--            <xs:element name="names" type="xs:string"/>-->
+    <!--            <xs:element name="lastNames" type="xs:string"/>-->
+    <!--            <xs:element name="typeDocument" type="xs:string"/>-->
+    <!--            <xs:element name="document" type="xs:string"/>-->
+    <!--            <xs:element name="birthDate" type="xs:string"/>-->
+    <!--            <xs:element name="dateGetCompany" type="xs:string"/>-->
+    <!--            <xs:element name="charge" type="xs:string"/>-->
+    <!--            <xs:element name="salary" type="xs:double"/>-->
+    <!--        </xs:sequence>-->
+    <!--    </xs:complexType>-->
+</xs:schema>
